@@ -1,0 +1,107 @@
+.recom {
+    margin-top: 20px;
+    margin-bottom: 80px;
+
+    .recom_title {
+        font-family: $inconsolata;
+        font-weight: 600;
+        font-size: 26px;
+        color: $black;
+        letter-spacing: 1px;
+    }
+
+    .recom_wrapper {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 15px;
+        grid-auto-flow: dense;
+
+        .recom_item:nth-child(2n) {
+            grid-column: 2;
+            grid-row: auto / span 1;
+            margin-top: 20px;
+        }
+    }
+
+}
+
+.recom_item {
+    button {
+        width: 100%;
+        background: $white;
+        border-radius: 20px 4px; // уменьшен
+        box-shadow: 2px 3px 3px 0px #00000030, -0.5px -0.5px 3px 0px #00000010;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: 6px 10px; // добавлено для компактности
+    }
+
+    .item_img {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 20px 4px 2px 2px; // уменьшен
+        box-shadow: 0px 3px 6px 0px #00000013;
+    }
+
+    .item_content {
+        display: flex;
+        flex-direction: column;
+        gap: 2px; 
+        margin-top: 4px; 
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .item_title {
+        font-family: $montserrat;
+        font-size: 13px;
+        color: $black;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .item_suptitle {
+        color: #000000b0;
+        font-family: $montserrat;
+        font-size: 8.5px;
+        line-height: 1.1;
+    }
+
+    .item_price_cart {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4px; // уменьшенный отступ
+    }
+
+    .item_price {
+        color: $dark_black;
+        font-family: $montserrat;
+        font-size: 12px;
+        font-weight: 500;
+
+        .num {
+            font-weight: 400;
+            font-size: 11px;
+            padding-left: 2px;
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 9px;
+        }
+    }
+
+    .item_cart {
+        background: transparent;
+        padding: 1px 3px;
+        border-radius: 3px;
+        border: 1px solid $light__green; // уменьшен размер границы
+        font-size: 11px;
+        color: $light__green;
+    }
+}
